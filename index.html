@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blood Bank</title>
+</head>
+<body>
+    <header>
+        <h1>Blood Bank</h1>
+    </header>
+    <main>
+        <section id="donors">
+            <h2>Available Donors</h2>
+            <ul id="donorList">
+                <!-- Donors will be dynamically added here using JavaScript -->
+            </ul>
+        </section>
+        <section id="request">
+            <h2>Request Blood</h2>
+            <form id="requestForm">
+                <label for="bloodType">Blood Type:</label>
+                <select id="bloodType" required>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+                <button type="submit">Request</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

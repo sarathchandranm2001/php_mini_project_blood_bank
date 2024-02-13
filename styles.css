@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+    background-image: url("https://www.centurypa.com/images/blog/Blood%20donation.jpg");
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #c8faac;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#bloodGroup{
+    padding: 10px;
+    margin-bottom: 16px;
+}

@@ -1,21 +1,24 @@
 <?php
-// Include the database connection file
-include('db.php');
+require_once("db.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $bloodGroup = $_POST['bloodGroup'];
+    $name = isset($_POST["name"]) ? strtoupper($_POST["name"]) : "";
+    $phone = isset($_POST["phone"]) ? ($_POST["phone"]) : "";
+    $gender = isset($_POST["gender"]) ? strtoupper($_POST["gender"]) : "";
+    $bloodGroup = isset($_POST["bloodGroup"]) ? strtoupper($_POST["bloodGroup"]) : "";
+    $weight = isset($_POST["weight"]) ? ($_POST["weight"]) : "";
+    $address = isset($_POST["address"]) ? strtoupper($_POST["address"]) : "";
+    $noDiseases = isset($_POST["noDiseases"]) ? "Yes" : "No";
 
-    // Insert data into the database
-    $sql = "INSERT INTO donors (name, phone, bloodGroup) VALUES ('$name', '$phone', '$bloodGroup')";
-    $result = $conn->query($sql);
+    $sql = "INSERT INTO php_donor (name, phone, gender, bloodGroup, weight, address) 
+            VALUES ('$name', '$phone', '$gender', '$bloodGroup', '$weight', '$address')";
 
-    if ($result === TRUE) {
+    if ($conn->query($sql) === TRUE) {
         echo "Registration successful!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
+
+$conn->close();
 ?>

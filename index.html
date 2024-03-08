@@ -3,37 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Blood Bank</title>
+    <title>Blood Donor Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .btn-primary, .btn-danger {
+            width: 150px;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Blood Bank</h1>
-    </header>
-    
-    <main>
-        <section id="donors">
-            <h2>Available Donors</h2>
-        </section>
-        <section id="request">
-            <h2>Request Blood</h2>
-            <form id="requestForm" action="getdonor.php" method="post">
-                <label for="bloodType">Blood Type:</label>
-                <select id="bloodType" name="bloodType" required>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                </select>
-                <button type="submit">Request</button>
-            </form>
-        </section>
-    </main>
-    <script src="script.js"></script>
-    <a href="register.html">kundi</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Blood Donor Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container text-center">
+    <h1>Welcome to the Blood Donor Page</h1>
+    <p>Choose an option below:</p>
+    <button class="btn btn-primary" onclick="requestBlood()">Request Blood</button>
+    <button class="btn btn-danger" onclick="donateBlood()">Donate Blood</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function requestBlood() {
+        alert('Request Blood functionality coming soon!');
+    }
+
+    function donateBlood() {
+        alert('Donate Blood functionality coming soon!');
+    }
+</script>
+
 </body>
 </html>

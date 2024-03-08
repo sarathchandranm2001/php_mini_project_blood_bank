@@ -14,8 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$name', '$phone', '$gender', '$bloodGroup', '$weight', '$address')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful!";
+        echo '<script>alert("Registration successful!");</script>';
+        echo '<script>window.location.href = "index.html";</script>';
     } else {
+        
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }

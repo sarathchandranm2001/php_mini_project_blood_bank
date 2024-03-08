@@ -1,0 +1,38 @@
+body {
+    background-color: #8af78b !important;;
+    color: #495057;
+    
+}
+
+.container {
+    background-color: #fd5555;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #f4f6f8;
+}
+
+.card {
+    border: 1px solid #1168c0;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}

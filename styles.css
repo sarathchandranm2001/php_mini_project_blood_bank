@@ -13,9 +13,8 @@ body {
     padding: 20px;
     border: 1px solid #860c0c;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
 
 h2 {
     color: #333;
@@ -29,22 +28,83 @@ form {
 
 label {
     margin-bottom: 8px;
+    color: #333;
 }
 
-input {
+input,
+select,
+button {
     padding: 10px;
     margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+    width: 100%; /* Make inputs and selects full-width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+input:hover,
+select:hover,
+button:hover {
+    border-color: #4CAF50;
 }
 
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-#bloodGroup{
+
+button:hover {
+    background-color: #45a049;
+}
+
+#bloodGroup {
     padding: 10px;
-    margin-bottom: 16px;
+}
+
+#gender {
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Target radio button labels for proper alignment */
+input[type="radio"] + label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#addressFields {
+    display: none;
+}
+
+#addressFields label,
+#addressFields input {
+    margin-bottom: 10px;
+}
+
+#addressFields input:hover {
+    border-color: #4CAF50;
+}
+
+/* Additional Styles for Address Fields */
+#addressFields input[type="text"] {
+    padding: 10px;
+}
+
+#addressFields input[type="text"]:hover {
+    border-color: #4CAF50;
 }

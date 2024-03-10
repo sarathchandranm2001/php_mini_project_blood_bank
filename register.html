@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="styles.css">
     <title>Donor Registration</title>
     <style>
-
+        /* Your styles go here */
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Donor Registration</h2>
-        <form action="register.php" method="post">
+        <form action="register.php" method="post" onsubmit="return checkAge()">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -42,35 +42,37 @@
 
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" required>
-            <br>
 
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
 
-            
-                <label for="noDiseases">Make Sure You Are Fit For Donation
-                <a href="link_to_diseases_page.html" target="_blank">Check fitness</a>
-                
+            <label for="noDiseases">
+                Make Sure You Are Fit For Donation
+                <a href="check_fitness.html" target="_blank">Check fitness</a>
             </label>
-         
-            
-        
-            
-            
-            
 
-            
-            
-            
             <button type="submit">Register</button>
             <br>
             <br>
             <img src="https://www.centurypa.com/images/blog/Blood%20donation.jpg" alt="" srcset="">
         </form>
     </div>
-    <div class="container2">
-        
-    </div>
 
+    <script>
+        function checkAge() {
+            var dobInput = document.getElementById("dob");
+            var dob = new Date(dobInput.value);
+            var currentDate = new Date();
+            var age = Math.floor((currentDate - dob) / (365.25 * 24 * 60 * 60 * 1000));
 
+            if (age < 18 && age >65) {
+                alert("You must be  18-65 years old to register as a donor.");
+                return false; // Cancel the registration
+            }
+
+            // If the donor is above 18, proceed with the registration
+            return true;
+        }
     </script>
 </body>
 </html>

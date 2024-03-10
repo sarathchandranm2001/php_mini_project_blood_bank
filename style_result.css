@@ -1,11 +1,12 @@
 body {
-    background-color: #8af78b !important;;
+    background-image: linear-gradient(to right, rgb(247, 178, 249) , rgb(239, 161, 249));
     color: #495057;
     
 }
 
 .container {
-    background-color: #fd5555;
+    background-image: linear-gradient(to right, rgb(90, 3, 106) , rgb(92, 2, 78));
+
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -24,6 +25,9 @@ h1 {
 
 .card:hover {
     transform: scale(1.05);
+    background-image: linear-gradient(to right, rgb(241, 185, 251) , rgb(244, 147, 224));
+    z-index: 1;
+    
 }
 
 .card-title {

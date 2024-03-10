@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style_req.css">
     <title>Blood Bank</title>
 </head>
 <body>
@@ -13,11 +13,8 @@
     </header>
     
     <main class="container mt-4">
-        <section id="donors">
-            <h2>Available Donors</h2>
-            <!-- Display donors using JavaScript here -->
-        </section>
-        <section id="request" class="mt-4">
+
+        <section id="request" class="mt-4  text-center">
             <h2>Request Blood</h2>
             <form id="requestForm" action="getdonor.php" method="post">
                 <div class="form-group">
@@ -35,13 +32,15 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Request</button>
             </form>
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*LrRIFrplsmGYko_JImnUHw.jpeg" alt="Blood Donation" class="blood-image">
+            <br>
+            <a href="register.html" class="btn btn-link">Click here to donate your valuable Blood. </a>  
         </section>
     </main>
-
+    
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <a href="register.html" class="btn btn-link">kundi</a>
 </body>
 </html>

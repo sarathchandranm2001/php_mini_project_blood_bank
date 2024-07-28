@@ -62,8 +62,7 @@ Creating a blood bank web application using PHP involves several key requirement
      - Implement APIs for third-party integrations (e.g., payment gateways, SMS notifications).
      - Create RESTful APIs for mobile app integration.
 
-   - **Testing**
-     - Conduct thorough testing, including unit tests, integration tests, and user acceptance tests.
+
 
    - **Deployment**
      - Deploy the application on a reliable web server or cloud platform.
